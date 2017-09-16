@@ -1,50 +1,48 @@
-# Art Book, an EmulationStation theme (WIP)
-A simple theme for Emulation Station and RetroPie based around the look of a coffee table book.  
-Discussion ongoing in this thread: https://retropie.org.uk/forum/topic/11728/new-theme-art-book
+# Art Book Pocket, an EmulationStation theme for small screens
+A simple theme for Emulation Station and RetroPie based on the look of a coffee table book.  
+Discussion is ongoing in this thread: https://retropie.org.uk/forum/topic/11728/new-theme-art-book
 
 ## Preview
+
+### Video Walkthrough
+https://www.youtube.com/watch?v=k_fKUiH_j-8
 
 ### Screenshots
 
 *Detailed View*
-![Detailed View](http://i.imgur.com/45WMfc3.png)
-
-*Video View*
-![Video View](http://i.imgur.com/rjfopnF.png)
+![Detailed View](http://i.imgur.com/BVkhz56.png)
 
 *Basic View*
 ![Basic View](http://i.imgur.com/YH4oAci.png)
 
-
 ## Details
 
-- Has support for system, basic, detailed and video views
-- Support for new All Games, Favorites, Recently Played and Custom Collections in latest version of Emulation Station
-- Displays the following metadata on detailed and video views: rating, description, # of players, genre, publish date & last played
-- 16x9 resolutions only (tested at 1280x720 and 1920x1080)
-- Layout designed to support hardware accelerated OMX player on video views
-- Has SMB (Super Mario), TLOZ (Legend of Zelda) and Megaman custom systems
+- Designed for 320x240 resolution
+- Uses support for theme variables to make the theme lightweight
+- Full list of supported systems: https://docs.google.com/spreadsheets/d/1gzaP0klzaBaE5_oB1_hQwr46qOmQnacSvSU3o-p5Q7U/edit#gid=0
+- System, basic, detailed and video views are supported
+- Support for new "All Games", "Favorites", "Last Played" and "Custom Collections" features in latest version of EmulationStation
 
 ## Acknowledgments
 
-- Inspired by old console poster designs (see: http://imgur.com/J4eeTun and http://imgur.com/Ut0SWfJ for examples) 
-- All Logo graphics are from the default Carbom theme made by Eric Hettervik (see: https://github.com/RetroPie/es-theme-carbon/)
-- Static.mp4 default video from OldRoom theme by Nismo (see: https://retropie.org.uk/forum/topic/5823/looking-for-testers-for-es-video-preview-on-raspberry-pi/20)
-- Video support possible because of work done by fieldofcows (see: https://retropie.org.uk/forum/topic/4820/video-preview-in-emulationstation)
-- Theme tutorial written by mattrixk was a huge help in learning how to build this (see: https://github.com/RetroPie/RetroPie-Setup/wiki/Creating-Your-Own-EmulationStation-Theme)
+- Some game console logo graphics are modified from the Carbom theme by Eric Hettervik
+- ChangaOne font by Eduardo Tunni
 
-## Scraping
+## Scraping 
+using selph's scraper: https://github.com/sselph/scraper
 
 ### Arcade
-
-- First Scrape Flyers (from GDB): /opt/retropie/supplementary/scraper/scraper -mame=true -mame_src=gdb,adb,ss -mame_img=fly,b,t,s -max_height=540 -max_width=394 -image_dir=media -image_path=media
-
-- Then Scrape Videos and Marquees (from SS): /opt/retropie/supplementary/scraper/scraper -mame=true -mame_src=ss,gdb,adb -download_videos=true -download_marquees=true -image_dir=media -image_path=media -video_dir=media -video_path=media -marquee_dir=media -marquee_path=media
+- Run the following commands in an arcade system's folder (i.e. /roms/mame-libretro, /roms/fba): 
+- First Scrape Flyers (from theGamesDB): /opt/retropie/supplementary/scraper/scraper -mame=true -mame_src=gdb,adb,ss -mame_img=fly,b,t,s -max_height=540 -max_width=394 -image_dir=media -image_path=media
+- Then if you want Videos and Marquees (from ScreenScraper) run this: /opt/retropie/supplementary/scraper/scraper -mame=true -mame_src=ss,gdb,adb -download_videos=true -download_marquees=true -image_dir=media -image_path=media -video_dir=media -video_path=media -marquee_dir=media -marquee_path=media
 
 ### Console
 
-- Scrape Boxart: /opt/retropie/supplementary/scraper/scraper -console_src=ss -console_img=b -max_height=640 -max_width=320 -image_dir=media -image_path=media -image_suffix=-boxart -use_nointro_name=false -strip_unicode=true
+- Run this command in a system's folder (i.e. /roms/nes): /opt/retropie/supplementary/scraper/scraper -console_src=ss -max_height=540 -max_width=505 -download_videos=true -download_marquees=true -image_dir=media -image_path=media -video_dir=media -video_path=media -marquee_dir=media -marquee_path=media -use_nointro_name=false 
+- Other Notes: 
+- If you only want images (no video/marquee) then you can modfiy the command to this: /opt/retropie/supplementary/scraper/scraper -console_src=ss -max_height=540 -max_width=505 image_dir=media -image_path=media -use_nointro_name=false 
+- If you want higher quality art, add -img_format=png to the end of the command (that will download pngs instead of jpgs but will also result in larger filesizes - which may add lag if you are on a pi0)
 
-- Scrape Snapshots: /opt/retropie/supplementary/scraper/scraper -console_src=ss -console_img=s -max_height=640 -max_width=320 -image_dir=media -image_path=media -image_suffix=-screenshot -region=eu,us -use_nointro_name=false 
+### Game & Watch
 
-- Scrape Logos: /opt/retropie/supplementary/scraper/scraper -console_src=ss -console_img=l -max_height=640 -max_width=320 -image_dir=media -image_path=media -image_suffix=-logo -img_format=png -use_nointro_name=false -strip_unicode=true
+- Run this command in the /roms/gameandwatch folder: /opt/retropie/supplementary/scraper/scraper -console_src=ss -console_img=clabel,b,s -img_format=png -max_height=540 -max_width=505 -image_dir=media -image_path=media
