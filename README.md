@@ -10,12 +10,15 @@ https://www.youtube.com/watch?v=k_fKUiH_j-8
 ### Screenshots
 
 *Detailed View (Snap)*
+
 ![Detailed View](https://i.imgur.com/LOOs3o6.png)
 
 *Detailed View (Boxart)*
+
 ![Detailed View](https://i.imgur.com/k05yfPC.png)
 
 *Basic View*
+
 ![Basic View](https://i.imgur.com/tSdKotv.png)
 
 ## Details
