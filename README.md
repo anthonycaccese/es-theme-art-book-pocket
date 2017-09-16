@@ -1,5 +1,5 @@
 # Art Book Pocket, an EmulationStation theme for small screens
-A simple theme for Emulation Station and RetroPie based on the look of a coffee table book.  
+A simple theme for Emulation Station and RetroPie based on the look of a coffee table book.  Designed for 320x240 resolution screens.
 Discussion is ongoing in this thread: https://retropie.org.uk/forum/topic/11728/new-theme-art-book
 
 ## Preview
@@ -9,11 +9,14 @@ https://www.youtube.com/watch?v=k_fKUiH_j-8
 
 ### Screenshots
 
-*Detailed View*
-![Detailed View](http://i.imgur.com/BVkhz56.png)
+*Detailed View (Snap)*
+![Detailed View](https://i.imgur.com/LOOs3o6.png)
+
+*Detailed View (Boxart)*
+![Detailed View](https://i.imgur.com/k05yfPC.png)
 
 *Basic View*
-![Basic View](http://i.imgur.com/YH4oAci.png)
+![Basic View](https://i.imgur.com/tSdKotv.png)
 
 ## Details
 
