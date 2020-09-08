@@ -12,7 +12,7 @@ license:        creative commons CC-BY-NC-SA
          <pos>1 1</pos>
       </helpsystem>
       <image name="logo">
-         <path>./_inc/logos/${system.theme}.svg</path>
+         <path>./_inc/logos/$system.svg</path>
       </image>
       <text name="logoText">
          <fontPath>./_inc/fonts/ChangaOne-Italic.ttf</fontPath>
